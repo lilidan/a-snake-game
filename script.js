@@ -131,10 +131,20 @@ function moveSnake() {
         head.y = 0;
     }
     
-    // Check collision with self
+    // Check collision with self (just continue moving, no game over)
     for (let i = 0; i < snake.length; i++) {
         if (snake[i].x === head.x && snake[i].y === head.y) {
-            gameOver();
+            // Reset snake to initial position instead of ending game
+            snake = [
+                {x: 10, y: 10}, // Head
+                {x: 9, y: 10},
+                {x: 8, y: 10}  // Tail
+            ];
+            // Reset direction
+            dx = 1;
+            dy = 0;
+            // Place new food
+            placeFood();
             return;
         }
     }
