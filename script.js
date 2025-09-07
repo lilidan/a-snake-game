@@ -116,12 +116,19 @@ function drawFood() {
 // Move snake
 function moveSnake() {
     // Create new head based on current direction
-    const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+    let head = {x: snake[0].x + dx, y: snake[0].y + dy};
     
-    // Check collision with walls
-    if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount) {
-        gameOver();
-        return;
+    // Wrap around edges
+    if (head.x < 0) {
+        head.x = tileCount - 1;
+    } else if (head.x >= tileCount) {
+        head.x = 0;
+    }
+    
+    if (head.y < 0) {
+        head.y = tileCount - 1;
+    } else if (head.y >= tileCount) {
+        head.y = 0;
     }
     
     // Check collision with self
