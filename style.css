@@ -1,0 +1,142 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 200, 0.5);
+    max-width: 90%;
+    width: 500px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    background: linear-gradient(to right, #ff00cc, #00ccff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.score, .high-score {
+    background: rgba(0, 200, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #00ffcc;
+}
+
+#game-canvas {
+    background-color: #0a0a2a;
+    border-radius: 10px;
+    border: 3px solid #00ffcc;
+    box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+button {
+    background: linear-gradient(45deg, #ff00cc, #00ccff);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    margin: 0 5px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 200, 0.5);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 200, 0.8);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.instructions {
+    background: rgba(255, 0, 204, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ff00cc;
+    margin-top: 15px;
+}
+
+.instructions p {
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+    
+    .game-container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    #game-canvas {
+        width: 95%;
+        height: auto;
+    }
+    
+    button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        margin: 5px 2px;
+    }
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.game-over h2 {
+    color: #ff0000;
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.restart-btn {
+    background: linear-gradient(45deg, #ff0000, #ff6a00);
+}
