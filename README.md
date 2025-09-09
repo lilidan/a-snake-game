@@ -4,9 +4,15 @@
 
 build a snake game colorful and fun
 
-##🚀 Visit App
+## 🚀 Visit App
 
 **[Click Here to Visit App](https://a-snake-game.vibefunc.com)**
+
+## 📸 Preview
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/lilidan/a-snake-game/main/app-preview.png" alt="App Preview" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+</div>
 
 ## 📄 About
 
